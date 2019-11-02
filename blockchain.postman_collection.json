@@ -1,0 +1,164 @@
+{
+  "info": {
+    "_postman_id": "d57cf738-84f0-48be-8aef-87648139d14b",
+    "name": "blockchain",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Mine",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "http://localhost:5000/mine",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "mine"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Mine on Block 2",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "http://localhost:5001/mine",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5001",
+          "path": [
+            "mine"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "New Transaction",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"sender\": \"190b58f669664c3c92a483832df675d4\",\n    \"recipient\": \"some-other-address\",\n    \"amount\": 5\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/transactions/new",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "transactions",
+            "new"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Chain",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "http://localhost:5000/chain",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "chain"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Register Node",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"nodes\": [\"http://127.0.0.1:5001\"]\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/nodes/register",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "nodes",
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Resolve Nodes",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "http://localhost:5000/nodes/resolve",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "nodes",
+            "resolve"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
